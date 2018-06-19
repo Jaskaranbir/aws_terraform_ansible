@@ -1,0 +1,12 @@
+---
+# tasks file for roles/run-docker-containers
+
+- name: Copying Docker-Container definitions. This might take a while...
+  copy:
+    src: "{{ playbook_dir }}/docker"
+    dest: "{{ docker_container_definitions_remote_location }}"
+    force: false
+
+- name: Execute Docker-Compose file
+  docker_service:
+    project_src: "{{ docker_container_definitions_remote_location }}/docker"

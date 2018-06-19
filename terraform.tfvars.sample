@@ -1,0 +1,47 @@
+#--------------------------------------------------------------
+# Provider-Specific
+#--------------------------------------------------------------
+aws_region = "your-aws-region"
+
+instance_type = "t2.micro"
+
+ami_ubuntu_version = 16.04
+
+#--------------------------------------------------------------
+# Keys
+#--------------------------------------------------------------
+aws_access_key = "your-access-key"
+
+aws_secret_key = "your-secret-key"
+
+ssh_remote_user = "ubuntu"
+
+# Specify either the actual key, or the key-file lo cation
+# Otherwise ssh-keys take precedence over ssh-key-files
+
+ssh_public_key = ""
+
+ssh_public_key_file_location = "your-ssh-public-key-location"
+
+ssh_private_key = ""
+
+ssh_private_key_file_location = "your-ssh-private-key-location"
+
+#--------------------------------------------------------------
+# Meta
+#--------------------------------------------------------------
+name = "your-project-name"
+
+#--------------------------------------------------------------
+# Network
+#--------------------------------------------------------------
+vpc_cidr = "172.31.0.0/16"
+
+availability_zones = "your-availability-zone" # Region Specific
+
+private_subnets = "172.31.1.0/24"
+
+#--------------------------------------------------------------
+# VM-Instance
+#--------------------------------------------------------------
+bootstrap_file_path = "scripts/terraform/bootstrap_instance.sh"

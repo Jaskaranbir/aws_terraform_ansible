@@ -1,0 +1,31 @@
+---
+# This playbook sets-up python-modules, install docker and
+# docker-compose, and runs the docker-compose definitions on remote.
+
+- name: Setup Docker and Docker-Compose
+  hosts: aws-loraserver
+  become: true
+  roles:
+    - roles/bootstrap/setup-docker
+  tags:
+    - bootstrap
+    - docker
+    - docker-compose
+
+- name: Setup python and python-modules
+  hosts: aws-loraserver
+  become: true
+  roles:
+    - setup-python-modules
+  tags:
+    - python
+    - pip
+
+- name: Setup and run Docker-Containers
+  hosts: aws-loraserver
+  become: false
+  roles:
+    - run-docker-containers
+  tags:
+    - docker
+    - docker-compose

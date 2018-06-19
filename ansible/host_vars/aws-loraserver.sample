@@ -1,0 +1,21 @@
+ansible_python_interpreter: "/usr/bin/python3"
+# ansible_host is auto-set by Terraform, when running Terraform.
+# Otherwise supply the host-ip manually.
+ansible_host              : "your-ec2-instance-public-ip"
+ansible_ssh_user          : "ubuntu"
+ansible_remote_user       : "ubuntu"
+ssh_private_key_file      : "path-to-your-private-ssh-key"
+
+required_python_packages: [
+  "docker",
+  "docker-compose"
+]
+
+docker_users: [
+  "{{ansible_remote_user}}"
+]
+
+docker_compose_version         : "1.21.2"
+docker_compose_install_location: "/usr/local/bin"
+
+docker_container_definitions_remote_location: "/home/{{ansible_remote_user}}"

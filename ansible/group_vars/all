@@ -1,0 +1,2 @@
+# Any generated resources should go into this directory
+out_dir: "{{ playbook_dir }}/out"

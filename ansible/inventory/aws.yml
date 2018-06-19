@@ -1,0 +1,7 @@
+all:
+
+  hosts:
+    aws-loraserver:
+      ansible_python_interpreter: "{{ ansible_python_interpreter }}"
+      ansible_host: "{{ ansible_host }}"
+      ansible_ssh_private_key_file: "{{ ssh_private_key_file }}"

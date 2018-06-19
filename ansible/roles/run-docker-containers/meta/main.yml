@@ -1,0 +1,16 @@
+galaxy_info:
+  author: Jaskaranbir Dhillon
+  description: Copy and run Docker-Container definitions on remote host.
+
+  license: WTFPL
+
+  min_ansible_version: 1.2
+
+  platforms:
+    - name: Ubuntu
+      versions:
+      - 16.04
+
+  galaxy_tags:
+    - docker
+    - docker-compose

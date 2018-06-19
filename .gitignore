@@ -1,0 +1,16 @@
+# Tools/Modules
+.terraform
+.vagrant
+
+# Editor
+.history
+.vscode
+
+# Compiled files
+*.tfstate*
+
+# Sensitive Files
+aws-loraserver
+terraform.tfvars
+aws-ssh-key
+aws-ssh-key.pub

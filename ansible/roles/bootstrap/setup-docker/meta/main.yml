@@ -1,0 +1,17 @@
+galaxy_info:
+  author: Jaskaranbir Dhillon
+  description: Setup Docker and Docker-Compose
+
+  license: WTFPL
+
+  min_ansible_version: 1.2
+
+  platforms:
+    - name: Ubuntu
+      versions:
+      - 16.04
+
+  galaxy_tags:
+    - bootstrap
+    - docker
+    - docker-compose
