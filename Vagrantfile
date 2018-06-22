@@ -71,9 +71,9 @@ Vagrant.configure(2) do |config|
         source: "aws-ssh-key",
         destination: "#{$tmp_files_path}/aws-ssh-key"
     loravm.vm.provision :shell,
-        inline: "cp #{$tmp_files_path}/aws-ssh-key #{$home_path}/aws-ssh-key"
+        inline: "cp #{$tmp_files_path}/aws-ssh-key #{$home_path}/.ssh/aws-ssh-key"
     loravm.vm.provision :shell,
-        inline: "chmod 400 #{$home_path}/aws-ssh-key"
+        inline: "chmod 400 #{$home_path}/.ssh/aws-ssh-key"
     loravm.vm.provision :shell,
         inline: "rm #{$tmp_files_path}/aws-ssh-key"
 
