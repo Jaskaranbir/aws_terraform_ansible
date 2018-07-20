@@ -1,0 +1,17 @@
+{
+  "name": "docker-node-example",
+  "version": "0.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "docker node"
+  ],
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "license": "MIT"
+}

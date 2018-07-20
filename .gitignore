@@ -12,5 +12,7 @@
 # Sensitive Files
 aws-loraserver
 terraform.tfvars
-aws-ssh-key
-aws-ssh-key.pub
+aws-ssh-key*
+
+# Application
+node_modules

@@ -42,6 +42,13 @@ services:
     ports:
       - 1883:1883
 
+  postserver:
+    build: .
+    volumes:
+      - ./test_post-server:/usr/src/app/
+    ports:
+      - "8081:3000"
+
 volumes:
   PostgreVol:
   RedisVol:
