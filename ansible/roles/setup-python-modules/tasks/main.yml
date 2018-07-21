@@ -2,7 +2,9 @@
 # tasks file for roles/setup-python-modules
 
 - name: Install PIP3
-  apt: name=python3-pip update_cache=yes
+  apt:
+    name: python3-pip
+    update_cache: yes
 
 - name: Install requested python-modules
   pip:
